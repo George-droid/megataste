@@ -11,6 +11,11 @@ class LandingPageController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    public function landingpage()
+    {
+        return view('fe.landingpage');
+    }
     public function index()
     {
         //
