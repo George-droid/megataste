@@ -69,7 +69,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                                 <h5>Master Chefs</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>We have have the best selected chefs to prepare you prefered dish</p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                                 <h5>Quality Food</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Enjoy top-notch dishes prepared by our top-notch chefs</p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
                                 <h5>Online Order</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>Place an order online and get your delicious meal delivered to you</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-headset text-primary mb-4"></i>
                                 <h5>24/7 Service</h5>
-                                <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                                <p>We have 24/7 customer service to for enquiries and concerns</p>
                             </div>
                         </div>
                     </div>
@@ -128,11 +128,11 @@
                     </div>
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Restoran</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
+                        <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Mega taste</h1>
+                        <p class="mb-4">We are a state of the art kitchen located in ... Abuja ready to serve and arouse your taste buds with Mega tastes</p>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                         <div class="row g-4 mb-4">
-                            <div class="col-sm-6">
+                            {{-- <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                                     <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
                                     <div class="ps-4">
@@ -140,8 +140,8 @@
                                         <h6 class="text-uppercase mb-0">Experience</h6>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
+                            </div> --}}
+                            {{-- <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                                     <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
                                     <div class="ps-4">
@@ -149,7 +149,7 @@
                                         <h6 class="text-uppercase mb-0">Master Chefs</h6>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                         <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
                     </div>
@@ -505,7 +505,7 @@
 
 
         <!-- Reservation Start -->
-        <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
+        {{-- <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s">
             <div class="row g-0">
                 <div class="col-md-6">
                     <div class="video">
@@ -580,12 +580,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Reservation Start -->
 
 
         <!-- Team Start -->
-        <div class="container-xxl pt-5 pb-3">
+        {{-- <div class="container-xxl pt-5 pb-3">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Team Members</h5>
@@ -650,7 +650,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Team End -->
 
 

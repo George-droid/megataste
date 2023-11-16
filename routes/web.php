@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -18,3 +19,4 @@ use App\Http\Controllers\LandingPageController;
 //     return view('welcome');
 // });
 Route::get('/', [LandingPageController::class, 'landingpage'])->name('fe.landingpage');
+Route::get('/menu', [MenuController::class, 'menu'])->name('fe.menu');
