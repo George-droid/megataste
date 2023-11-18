@@ -16,6 +16,11 @@ class LandingPageController extends Controller
     {
         return view('fe.landingpage');
     }
+
+    public function about()
+    {
+        return view('fe.about');
+    }
     public function index()
     {
         //

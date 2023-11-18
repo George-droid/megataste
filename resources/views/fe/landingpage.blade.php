@@ -46,8 +46,10 @@
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <h1 class="display-3 text-white animated slideInLeft">Enjoy <br>Culinary Mastery</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">Indulge in our broad cuisine, which has been created with passion and precision. 
+                                Every dish tells a story of taste and dedication.
+                            </p>
                             <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
@@ -67,36 +69,36 @@
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-                                <h5>Master Chefs</h5>
-                                <p>We have have the best selected chefs to prepare you prefered dish</p>
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Restaurant</h5>
+                                <p>Savor delectable dishes with ease - Dine-in or Grab & Go.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
-                                <h5>Quality Food</h5>
-                                <p>Enjoy top-notch dishes prepared by our top-notch chefs</p>
+                                <i class="fa fa-3x fa-birthday-cake text-primary mb-4"></i>
+                                <h5>Pastries & Bakery</h5>
+                                <p>Indulge in heavenly treats - Freshly baked pastries daily.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-                                <h5>Online Order</h5>
-                                <p>Place an order online and get your delicious meal delivered to you</p>
+                                <i class="fa fa-3x fa-truck text-primary mb-4"></i>
+                                <h5>Express Deliveries</h5>
+                                <p>Swift and reliable - Get your favorites delivered promptly.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="service-item rounded pt-3">
                             <div class="p-4">
-                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
-                                <h5>24/7 Service</h5>
-                                <p>We have 24/7 customer service to for enquiries and concerns</p>
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Catering Services</h5>
+                                <p>Elevate events seamlessly - Unmatched outdoor catering.</p>
                             </div>
                         </div>
                     </div>
@@ -130,7 +132,8 @@
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Mega taste</h1>
                         <p class="mb-4">We are a state of the art kitchen located in ... Abuja ready to serve and arouse your taste buds with Mega tastes</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="mb-4">With a fusion of culinary expertise and a dedication to customer satisfaction, we've grown to become a prominent hub for food enthusiasts and connoisseurs alike</p>
+                        <p class="mb-4">From our walk-in/take-away Restaurant, our artisanal pastries and bakery creations to swift express deliveries and top-tier outdoor catering services, we strive to exceed expectations</p>
                         <div class="row g-4 mb-4">
                             {{-- <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
@@ -664,23 +667,23 @@
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>My birthday was a blast and everyone was well entertained, filled and happy. Thanks to Mega taste!!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1">Wisdom George</h5>
+                                <small>Abuja</small>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>From bridal showers to my wedding, I had no worries with everything catering. Mega taste did great work.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1">Mary-Jane Eze</h5>
+                                <small>Abuja</small>
                             </div>
                         </div>
                     </div>
