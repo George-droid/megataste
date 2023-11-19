@@ -19,6 +19,6 @@ class Dish extends Model
 
     public function menu()
     {
-        return $this->belongsTo(Menu::class);
+        return $this->belongsTo(Menu::class, 'menus_id');
     }
 }

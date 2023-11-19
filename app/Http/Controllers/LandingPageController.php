@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\LandingPage;
 use App\Http\Requests\StoreLandingPageRequest;
 use App\Http\Requests\UpdateLandingPageRequest;
@@ -14,7 +15,8 @@ class LandingPageController extends Controller
 
     public function landingpage()
     {
-        return view('fe.landingpage');
+        $menus = Menu::with('dishes')->get();
+        return view('fe.landingpage', compact('menus'));
     }
 
     public function about()
