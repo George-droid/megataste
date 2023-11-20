@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\LandingPageController;
 
@@ -33,3 +34,5 @@ Route::get('/dashboard/orders', [CustomAuthController::class, 'orders'])->name('
 Route::get('/', [LandingPageController::class, 'landingpage'])->name('fe.landingpage');
 Route::get('/about', [LandingPageController::class, 'about'])->name('fe.about');
 Route::get('/menu', [MenuController::class, 'menu'])->name('fe.menu');
+Route::get('/contact', [ContactController::class, 'contact'])->name('fe.contact');
+Route::post('/contact/submit', [ContactController::class, 'submitContactForm'])->name('fe.submitContactForm');
