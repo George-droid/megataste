@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\LandingPageController;
 
@@ -25,10 +26,11 @@ Route::get('/login', [CustomAuthController::class, 'login'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('/logout', [CustomAuthController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', [CustomAuthController::class, 'dashboard'])->name('be.dashboard');
-Route::get('/dashboard/menus', [CustomAuthController::class, 'menus'])->name('be.menus');
-Route::get('/dashboard/dishes', [CustomAuthController::class, 'dishes'])->name('be.dishes');
-Route::get('/dashboard/orders', [CustomAuthController::class, 'orders'])->name('be.orders');
+Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('be.dashboard');
+Route::get('/dashboard/addmenus', [DashboardController::class, 'addMenus'])->name('be.addmenus');
+// Route::get('/dashboard/add-menus', [DashboardController::class, 'menus'])->name('be.menus');
+Route::get('/dashboard/dishes', [DashboardController::class, 'dishes'])->name('be.dishes');
+Route::get('/dashboard/orders', [DashboardController::class, 'orders'])->name('be.orders');
 
 
 Route::get('/', [LandingPageController::class, 'landingpage'])->name('fe.landingpage');

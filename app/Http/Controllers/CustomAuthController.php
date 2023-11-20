@@ -41,20 +41,4 @@ class CustomAuthController extends Controller
         return Redirect('dashboard');
     }
 
-    public function dashboard()
-    {
-        return view('be.dashboard');
-    }
-    public function menus()
-    {
-        return view('be.menus');
-    }
-    public function dishes()
-    {
-        return view('be.dishes');
-    }
-    public function orders()
-    {
-        return view('be.orders');
-    }
 }
