@@ -17,7 +17,7 @@
             rel="stylesheet">
     
         <!-- Custom styles for this template-->
-        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
     
     </head>
     
@@ -60,7 +60,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" href="{{ route('be.addmenus') }}">Add Menus Categories</a>
-                            <a class="collapse-item" href="cards.html">Delete Menu Categories</a>
+                            <a class="collapse-item" href="{{ route('be.listmenus') }}">Delete Menu Categories</a>
                         </div>
                     </div>
                 </li>

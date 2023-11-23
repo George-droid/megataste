@@ -28,7 +28,9 @@ Route::get('/logout', [CustomAuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('be.dashboard');
 Route::get('/dashboard/addmenus', [DashboardController::class, 'addMenus'])->name('be.addmenus');
-// Route::get('/dashboard/add-menus', [DashboardController::class, 'menus'])->name('be.menus');
+Route::post('/dashboard/savemenus', [DashboardController::class, 'saveMenus'])->name('be.savemenus');
+Route::get('/dashboard/listmenus', [DashboardController::class, 'listMenus'])->name('be.listmenus');
+Route::post('/dashboard/deletemenus', [DashboardController::class, 'deleteMenus'])->name('be.deletemenus');
 Route::get('/dashboard/dishes', [DashboardController::class, 'dishes'])->name('be.dishes');
 Route::get('/dashboard/orders', [DashboardController::class, 'orders'])->name('be.orders');
 
