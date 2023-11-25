@@ -51,27 +51,46 @@ class DashboardController extends Controller
         return view('be.adddishes', compact('menus'));
     }
     public function saveDishes(Request $request)
-{
-    $request->validate([
-        'menu_id' => 'required',
-        'dish_name' => 'required|string|max:255',
-        'description' => 'required|string', 
-        'price' => 'required|numeric', 
-    ]);
+    {
+        $request->validate([
+            'menu_id' => 'required',
+            'dish_name' => 'required|string|max:255',
+            'description' => 'required|string', 
+            'price' => 'required|numeric', 
+        ]);
 
-    $newDish = new Dish();
-    $newDish->menus_id = $request->input('menu_id');
-    $newDish->name = $request->input('dish_name');
-    $newDish->description = $request->input('description');
-    $newDish->price = $request->input('price');
-    // Assign other fields as needed
+        $newDish = new Dish();
+        $newDish->menus_id = $request->input('menu_id');
+        $newDish->name = $request->input('dish_name');
+        $newDish->description = $request->input('description');
+        $newDish->price = $request->input('price');
+        // Assign other fields as needed
 
-    $newDish->save();
+        $newDish->save();
 
-    // $request->session()->flash('success', 'Dish added successfully');
+        // $request->session()->flash('success', 'Dish added successfully');
 
-    return redirect()->back()->with('success', 'Dish added successfully');
-}
+        return redirect()->back()->with('success', 'Dish added successfully');
+    }
+
+    public function listDishes()
+    {
+        $dishes = Dish::with('menu')->get();
+        return view('be.deletedishes', compact('dishes'));
+    }
+
+    public function deleteDish(Request $request, $id)
+    {
+        $dish = Dish::find($id);
+
+        if (!$dish) {
+            return redirect()->back()->with('error', 'Dish not found.');
+        }
+
+        $dish->delete();
+
+        return redirect()->back()->with('success', 'Dish deleted successfully.');
+    }
     public function orders()
     {
         return view('be.orders');

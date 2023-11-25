@@ -33,6 +33,9 @@ Route::get('/dashboard/list-menus', [DashboardController::class, 'listMenus'])->
 Route::delete('/dashboard/list-menus/delete/{id}', [DashboardController::class, 'deleteMenus'])->name('be.deletemenus');
 Route::get('/dashboard/add-dishes', [DashboardController::class, 'addDishes'])->name('be.adddishes');
 Route::post('/dashboard/save-dishes', [DashboardController::class, 'saveDishes'])->name('be.savedishes');
+Route::get('/dashboard/list-dishes', [DashboardController::class, 'listDishes'])->name('be.listdishes');
+Route::delete('/dashboard/list-dishes/delete/{id}', [DashboardController::class, 'deleteDish'])->name('be.deletedishes');
+
 Route::get('/dashboard/orders', [DashboardController::class, 'orders'])->name('be.orders');
 
 Route::get('/', [LandingPageController::class, 'landingpage'])->name('fe.landingpage');
