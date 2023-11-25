@@ -36,6 +36,11 @@
             <div class="col-lg-12 mb-4 mb-xl-0">
                 <div class="demo-inline-spacing mt-3">
                     <table class="table">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <thead>
                             <tr>
                                 <th>Dish Name</th>

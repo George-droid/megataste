@@ -36,6 +36,11 @@
             <div class="col-lg-12 mb-4 mb-xl-0">
                 <div class="demo-inline-spacing mt-3">
                     <div class="list-group">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         @foreach ($menus as $menu)
                             <form action="{{ route('be.deletemenus', ['id' => $menu->id]) }}" method="POST">
                                 @csrf
