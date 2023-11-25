@@ -27,13 +27,13 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('/logout', [CustomAuthController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('be.dashboard');
-Route::get('/dashboard/addmenus', [DashboardController::class, 'addMenus'])->name('be.addmenus');
-Route::post('/dashboard/savemenus', [DashboardController::class, 'saveMenus'])->name('be.savemenus');
-Route::get('/dashboard/listmenus', [DashboardController::class, 'listMenus'])->name('be.listmenus');
-Route::post('/dashboard/deletemenus', [DashboardController::class, 'deleteMenus'])->name('be.deletemenus');
-Route::get('/dashboard/dishes', [DashboardController::class, 'dishes'])->name('be.dishes');
+Route::get('/dashboard/add-menus', [DashboardController::class, 'addMenus'])->name('be.addmenus');
+Route::post('/dashboard/save-menus', [DashboardController::class, 'saveMenus'])->name('be.savemenus');
+Route::get('/dashboard/list-menus', [DashboardController::class, 'listMenus'])->name('be.listmenus');
+Route::delete('/dashboard/list-menus/delete/{id}', [DashboardController::class, 'deleteMenus'])->name('be.deletemenus');
+Route::get('/dashboard/add-dishes', [DashboardController::class, 'addDishes'])->name('be.adddishes');
+Route::post('/dashboard/save-dishes', [DashboardController::class, 'saveDishes'])->name('be.savedishes');
 Route::get('/dashboard/orders', [DashboardController::class, 'orders'])->name('be.orders');
-
 
 Route::get('/', [LandingPageController::class, 'landingpage'])->name('fe.landingpage');
 Route::get('/about', [LandingPageController::class, 'about'])->name('fe.about');

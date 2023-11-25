@@ -39,7 +39,7 @@
                         @foreach ($menus as $menu)
                             <form action="{{ route('be.deletemenus', ['id' => $menu->id]) }}" method="POST">
                                 @csrf
-                                {{-- @method('DELETE') --}}
+                                @method('DELETE')
                                 <a href="#" class="list-group-item list-group-item-action">
                                     <h5>{{ $menu->name }}
                                         <button type="submit" class="btn btn-primary float-end">

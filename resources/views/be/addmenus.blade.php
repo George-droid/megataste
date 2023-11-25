@@ -17,6 +17,11 @@
         <div class="col-md-10 mb-3">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
+                  @if(session('success'))
+                      <div class="alert alert-success">
+                          {{ session('success') }}
+                      </div>
+                  @endif
                     <form method="POST" action="{{ route('be.savemenus') }}">
                         @csrf
                         <div class="mb-3">

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dish;
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -35,7 +37,7 @@ class DashboardController extends Controller
         $menus = Menu::with('dishes')->get();
         return view('be.deletemenus', compact('menus'));
     }
-    public function deleteMenu($id)
+    public function deleteMenus($id)
     {
         $menu = Menu::findOrFail($id);
         $menu->delete();
@@ -43,10 +45,33 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Menu deleted successfully');
     }
 
-    public function dishes()
-    {
-        return view('be.dishes');
+    public function addDishes()
+    {   
+        $menus = DB::table('menus')->get();
+        return view('be.adddishes', compact('menus'));
     }
+    public function saveDishes(Request $request)
+{
+    $request->validate([
+        'menu_id' => 'required',
+        'dish_name' => 'required|string|max:255',
+        'description' => 'required|string', 
+        'price' => 'required|numeric', 
+    ]);
+
+    $newDish = new Dish();
+    $newDish->menus_id = $request->input('menu_id');
+    $newDish->name = $request->input('dish_name');
+    $newDish->description = $request->input('description');
+    $newDish->price = $request->input('price');
+    // Assign other fields as needed
+
+    $newDish->save();
+
+    // $request->session()->flash('success', 'Dish added successfully');
+
+    return redirect()->back()->with('success', 'Dish added successfully');
+}
     public function orders()
     {
         return view('be.orders');
