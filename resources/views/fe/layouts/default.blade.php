@@ -55,9 +55,9 @@
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                     </div>
                 </div> --}}
-                <a href="{{ route('fe.contact') }}" class="nav-item nav-link">Contact</a>
+                {{-- <a href="{{ route('fe.contact') }}" class="nav-item nav-link">Contact</a> --}}
             </div>
-            <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+            <a href="{{ route('fe.contact') }}" class="btn btn-primary py-2 px-4">Contact Us</a>
         </div>
     </nav>
 

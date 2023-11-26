@@ -50,7 +50,7 @@
                             <p class="text-white animated slideInLeft mb-4 pb-2">Indulge in our broad cuisine, which has been created with passion and precision. 
                                 Every dish tells a story of taste and dedication.
                             </p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                            <a href="{{ route('fe.contact') }}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Reach out</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="img/hero.png" alt="">
