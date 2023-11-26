@@ -35,10 +35,9 @@ class CustomAuthController extends Controller
 
     public function logout()
     {
-        Session::flush();
         Auth::logout();
 
-        return Redirect('dashboard');
+        return redirect()->route('login')->with('success', 'You have been logged out');
     }
 
 }
