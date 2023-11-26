@@ -677,7 +677,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>My birthday was a blast and everyone was well entertained, filled and happy. Thanks to Mega taste!!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;"> --}}
                             <div class="ps-3">
                                 <h5 class="mb-1">Wisdom George</h5>
                                 <small>Abuja</small>
@@ -688,7 +688,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>From bridal showers to my wedding, I had no worries with everything catering. Mega taste did great work.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;"> --}}
                             <div class="ps-3">
                                 <h5 class="mb-1">Mary-Jane Eze</h5>
                                 <small>Abuja</small>
@@ -697,22 +697,22 @@
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>I have to say Megataste Kitchen is the place to be to enjoy homely meals just as though from your kitchen.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;"> --}}
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
-                                <small>Profession</small>
+                                <h5 class="mb-1">Favour Oti</h5>
+                                <small>Abuja</small>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                        <p>I have actually never regretted patronizing Megataste, they have good reception and great meals.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                            {{-- <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;"> --}}
                             <div class="ps-3">
-                                <h5 class="mb-1">Client Name</h5>
+                                <h5 class="mb-1">Ibrahim Saliu</h5>
                                 <small>Profession</small>
                             </div>
                         </div>
