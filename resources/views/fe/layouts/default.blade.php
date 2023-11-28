@@ -77,8 +77,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>46THCRESCENT,CITECGWARIMPA,ABUJA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>08096658584</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No 44 Zone, Bwari Road, Byazhin across Kubwa Abuja</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>092925555, 07038103222 (whatsapp)</p>
+                    {{-- <p class="mb-2"><i class="fa fa-whatsapp me-3"></i>07038103222</p> --}}
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>megataste2023@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://twitter.com/Megataste23"><i class="fab fa-twitter"></i></a>
@@ -89,10 +90,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Opening</h4>
-                    <h5 class="text-light fw-normal">Monday - Saturday</h5>
-                    <p>09AM - 09PM</p>
-                    <h5 class="text-light fw-normal">Sunday</h5>
-                    <p>10AM - 08PM</p>
+                    <h5 class="text-light fw-normal">Opened Daily</h5>
+                    <p>07AM - 10PM</p>
+                    {{-- <h5 class="text-light fw-normal">Sunday</h5>
+                    <p>10AM - 08PM</p> --}}
                 </div>
                 {{-- <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Newsletter</h4>
