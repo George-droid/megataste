@@ -77,14 +77,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No 44 Zone, Bwari Road, Byazhin across Kubwa Abuja</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No 44 Zone D, Bwari Road, Byazhin across Kubwa Abuja</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>092925555, 07038103222 (whatsapp)</p>
                     {{-- <p class="mb-2"><i class="fa fa-whatsapp me-3"></i>07038103222</p> --}}
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>megataste2023@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://twitter.com/Megataste23"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://instagram.com/megatastekitchen?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>

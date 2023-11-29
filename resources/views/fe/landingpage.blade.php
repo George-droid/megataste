@@ -131,7 +131,7 @@
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
                         <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Mega taste</h1>
-                        <p class="mb-4">We are a state of the art kitchen located in No 44 Zone, Bwari Road, Byazhin across Kubwa Abuja ready to serve and arouse your taste buds with Mega tastes</p>
+                        <p class="mb-4">We are a state of the art kitchen located in No 44 Zone D, Bwari Road, Byazhin across Kubwa Abuja ready to serve and arouse your taste buds with Mega tastes</p>
                         <p class="mb-4">With a fusion of culinary expertise and a dedication to customer satisfaction, we've grown to become a prominent hub for food enthusiasts and connoisseurs alike</p>
                         <p class="mb-4">From our walk-in/take-away Restaurant, our artisanal pastries and bakery creations to swift express deliveries and top-tier outdoor catering services, we strive to exceed expectations</p>
                         <div class="row g-4 mb-4">

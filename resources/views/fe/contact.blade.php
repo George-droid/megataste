@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-md-6">
                             <h5 class="section-title ff-secondary fw-normal text-start text-primary">Call Us</h5>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>08096658584</p>
+                            <p><i class="fa fa-envelope-open text-primary me-2"></i>092925555</p>
                         </div>
                         {{-- <div class="col-md-4">
                             <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
