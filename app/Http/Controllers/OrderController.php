@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
 
 class OrderController extends Controller
 {
+    public function order()
+    {
+        $menus = Menu::with('dishes')->get();
+        return view('fe.menu', compact('menus'));
+    }
     /**
      * Display a listing of the resource.
      */

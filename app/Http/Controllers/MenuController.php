@@ -15,7 +15,7 @@ class MenuController extends Controller
      public function menu()
     {
         $menus = Menu::with('dishes')->get();
-        return view('fe.menu', compact('menus'));
+        return view('fe.order', compact('menus'));
     }
     public function index()
     {

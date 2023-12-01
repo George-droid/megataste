@@ -24,6 +24,6 @@ class Dish extends Model
 
     public function orders()
     {
-        return $this->belongsToMany(Order::class)->withTimestamps();
+        return $this->belongsToMany(Order::class, 'order_dish')->withTimestamps();
     }
 }
