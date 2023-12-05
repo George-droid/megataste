@@ -47,3 +47,4 @@ Route::get('/menu', [MenuController::class, 'menu'])->name('fe.menu');
 Route::get('/contact', [ContactController::class, 'contact'])->name('fe.contact');
 Route::post('/contact/submit', [ContactController::class, 'submitContactForm'])->name('fe.submitContactForm');
 Route::get('/order', [OrderController::class, 'order'])->name('fe.order');
+Route::post('/contact/place-order', [OrderController::class, 'placeOrder'])->name('fe.placeOrder');

@@ -32,7 +32,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
+                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Place an order now</h5>
                 <h1 class="mb-5">Contact For Enquiries</h1>
             </div>
             <div class="row g-4">
@@ -59,45 +59,83 @@
                         tabindex="0"></iframe>
                 </div> --}}
                 <div class="col-md-12 d-flex justify-content-center">
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <form action="{{ route('fe.submitContactForm') }}" method="POST">
+                    @if(session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <div class="col-md-9 wow fadeInUp" data-wow-delay="0.2s">
+                        <form action="{{ route('fe.placeOrder') }}" method="POST">
                             @csrf
                             <div class="row g-3">
                                 <div class="col-md-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <input type="text" class="form-control" id="customer_name" name="customer_name" placeholder="Your Name">
+                                        <label for="customer_name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="customer_email" name="customer_email" placeholder="Your Email">
+                                        <label for="customer_email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Phone No.">
-                                        <label for="phone">Your Phone No.</label>
+                                        <input type="text" class="form-control" id="customer_phone" name="customer_phone" placeholder="Your Phone No.">
+                                        <label for="customer_phone">Your Phone No.</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-md-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        <input type="text" class="form-control" id="customer_address" name="customer_address" placeholder="Your Address">
+                                        <label for="customer_address">Your Address - House no, street, area.</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
+                            
+                                <!-- Other customer details fields -->
+                            
+                                <div class="col-md-12">
+                                    <label for="dishes">Select Dishes:</label>
+                                    <div class="row">
+                                        @foreach ($menus as $menu)
+                                            <div class="col-md-4">
+                                                <h5>{{ $menu->name }}</h5>
+                                                @foreach ($menu->dishes as $dish)
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="dish{{ $dish->id }}" name="dishes[{{ $dish->id }}][selected]" value="{{ $dish->id }}">
+                                                        <label class="form-check-label" for="dish{{ $dish->id }}">{{ $dish->name }}</label>
+                                                        <input type="number" class="form-control" name="dishes[{{ $dish->id }}][quantity]" value="1">
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        @endforeach
                                     </div>
                                 </div>
+                                
+
+                                {{-- <label for="dishes">Select Dishes:</label>
+                                <select multiple id="dishes" name="dishes[]">
+                                    @foreach ($dishes as $dish)
+                                        <option value="{{ $dish->id }}">{{ $dish->name }}</option>
+                                    @endforeach
+                                </select> --}}
+
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Place Order</button>
                                 </div>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
