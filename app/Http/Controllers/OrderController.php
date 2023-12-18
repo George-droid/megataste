@@ -28,6 +28,7 @@ class OrderController extends Controller
             'customer_phone' => 'required|string|max:20',
             'customer_address' => 'required|string',
             'dishes.*.quantity' => 'required|integer',
+            'payment_receipt' => 'required|string'
         ];
 
         $validator = Validator::make($request->all(), $rules);
@@ -42,6 +43,8 @@ class OrderController extends Controller
         $customerPhone = $request->input('customer_phone');
         $customerAddress = $request->input('customer_address');
         $dishes = $request->input('dishes');
+        $paymentReceipt = $request->input('payment_receipt');
+        $totalAmount = $request->input('total_amount');
 
         // Prepare email data
         $orderDetails = [
@@ -50,6 +53,8 @@ class OrderController extends Controller
             'customerPhone' => $customerPhone,
             'customerAddress' => $customerAddress,
             'dishes' => $dishes,
+            'paymentReceipt' => $paymentReceipt,
+            'totalAmount' => $totalAmount,
         ];
         // dd($orderDetails);
 

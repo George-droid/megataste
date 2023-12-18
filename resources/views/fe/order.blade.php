@@ -125,6 +125,7 @@
                                 <div class="col-md-12 mt-4">
                                     <h5>Total Amount: &#8358;<span id="totalAmount">0.00</span></h5>
                                 </div>
+                                <input type="hidden" name="total_amount" id="totalAmountInput" value="0.00">
 
                                 {{-- <label for="dishes">Select Dishes:</label>
                                 <select multiple id="dishes" name="dishes[]">
@@ -132,13 +133,23 @@
                                         <option value="{{ $dish->id }}">{{ $dish->name }}</option>
                                     @endforeach
                                 </select> --}}
+                                <h3>Payment Information</h3>
+                                <p>Please transfer the total amount of your order to the provided account. Once the payment is done, upload the payment receipt below.</p>
+                                <p class="col-md-4">Account Name: Megataste</p>
+                                <p class="col-md-4">Account Number: XXXXXXXXXXX</p>
+                                <p class="col-md-4">Bank Name: XXX Bank</p>
+
+                                <!-- Payment Receipt Upload Form -->
+                                <div class="mb-3">
+                                    <label for="payment_receipt" class="form-label">Upload Payment Receipt</label>
+                                    <input type="file" class="form-control" id="payment_receipt" name="payment_receipt">
+                                </div>
 
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Place Order</button>
                                 </div>
                             </div>
                         </form>
-                        
                     </div>
                 </div>
             </div>

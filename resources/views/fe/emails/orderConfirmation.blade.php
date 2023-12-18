@@ -36,10 +36,11 @@
     </table>
 
     <!-- Add other order details below if needed -->
+    <p>Total Amount: {{ $orderDetails['totalAmount'] }}</p>
     <p>Customer Email: {{ $orderDetails['customerEmail'] }}</p>
     <p>Customer Phone: {{ $orderDetails['customerPhone'] }}</p>
     <p>Customer Address: {{ $orderDetails['customerAddress'] }}</p>
-
+    <p>Payment Receipt: {{ $orderDetails['paymentReceipt'] }}</p>
     <p>Thank you for your order!</p>
 </body>
 </html>

@@ -63,6 +63,61 @@
 
     @yield('content')
 
+    {{-- Order Modal --}}
+    {{-- <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Hidden form within the modal -->
+                <form action="" method="POST" enctype="multipart/form-data" id="paymentForm">
+                    @csrf
+                    <div class="modal-header">
+                        <!-- Modal title and close button -->
+                        <h2>Order Confirmation</h2>
+                        <!-- ... (Title and close button) ... -->
+                    </div>
+                    <div class="modal-body">
+                        <!-- Display order details here -->
+                        <table class="table">
+                            <!-- ... (Order details table) ... -->
+                            <thead>
+                                <tr>
+                                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Dish</th>
+                                    <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Quantity</th>
+                                    <!-- Add more table headers if needed -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($orderDetails['dishes'] as $dish)
+                                    @if (isset($dish['selected']) && $dish['quantity'] > 0)
+                                        @php
+                                            $dishModel = \App\Models\Dish::find($dish['selected']);
+                                            $dishName = $dishModel ? $dishModel->name : 'Unknown Dish';
+                                        @endphp
+                                        <tr>
+                                            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ $dishName }}</td>
+                                            <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ $dish['quantity'] }}</td>
+                                            <!-- Add more table cells if needed -->
+                                        </tr>
+                                    @endif
+                                @endforeach
+                            </tbody>
+                        </table>
+
+                        <!-- Payment Receipt Upload Form -->
+                        <div class="mb-3">
+                            <label for="payment_receipt" class="form-label">Upload Payment Receipt</label>
+                            <input type="file" class="form-control" id="payment_receipt" name="payment_receipt">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Place Order</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> --}}
+
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -143,6 +198,7 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    {{-- Total amount script --}}
     <script>
         const checkboxes = document.querySelectorAll('.dish-checkbox');
         const quantities = document.querySelectorAll('.dish-quantity');
@@ -171,7 +227,81 @@
             });
             totalAmount.textContent = total.toFixed(2);
         }
-    </script>    
+    </script>  
+
+    {{-- Update hiden total field --}}
+    <script>
+        function updateTotalAmount() {
+            let total = 0;
+            checkboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    const quantity = parseInt(quantities[index].value);
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    total += quantity * price;
+                }
+            });
+            totalAmount.textContent = total.toFixed(2);
+
+            // Set the hidden input field's value to the calculated total amount
+            document.getElementById('totalAmountInput').value = total.toFixed(2);
+        }
+    </script>
+    
+    {{-- Finish Order modal script--}}
+    {{-- <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the order modal
+            var orderModal = new bootstrap.Modal(document.getElementById('orderModal'));
+
+            // Get the form and listen for submit event
+            var form = document.querySelector('form[action="{{ route('fe.placeOrder') }}"]');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Collect form data
+                var formData = new FormData(form);
+
+                // Create an object from the form data
+                var orderDetails = {};
+                formData.forEach(function (value, key) {
+                    if (key.includes('dishes')) {
+                        if (!orderDetails.dishes) {
+                            orderDetails.dishes = [];
+                        }
+                        var dishKey = key.split('[')[1].split(']')[0]; // Extract the dish ID
+                        if (!orderDetails.dishes[dishKey]) {
+                            orderDetails.dishes[dishKey] = {};
+                        }
+                        orderDetails.dishes[dishKey][key.split('[')[2].split(']')[0]] = value;
+                    } else {
+                        orderDetails[key] = value;
+                    }
+                });
+
+                // Add event listener to the button that triggers the modal
+                var reviewOrderButton = document.querySelector('button[data-bs-target="#orderModal"]');
+                reviewOrderButton.addEventListener('click', function () {
+                    // Call a function to populate the modal with the order details
+                    populateModal(orderDetails);
+                });
+            });
+
+            // Function to populate the modal with order details
+            function populateModal(orderDetails) {
+                // Access the modal content elements and update their values
+                // For example:
+                var modalTitle = document.querySelector('.modal-title');
+                modalTitle.textContent = 'Order Details';
+
+                // Access other modal elements and populate them with order details
+
+                // Show the modal
+                orderModal.show();
+            }
+        });
+
+    </script> --}}
     
 </body>
 
