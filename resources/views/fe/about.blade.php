@@ -35,16 +35,16 @@
                 <div class="col-lg-6">
                     <div class="row g-3">
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="{{ asset('img/megataste-man-making-order.jpg') }}">
                         </div>
                         <div class="col-6 text-start">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{ asset('img/megataste-outview.jpg') }}">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.5s" src="{{ asset('img/megataste-food-1.jpg') }}">
                         </div>
                         <div class="col-6 text-end">
-                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="{{ asset('img/megataste-food-2.jpg') }}">
                         </div>
                     </div>
                 </div>

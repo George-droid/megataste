@@ -59,21 +59,21 @@
                         tabindex="0"></iframe>
                 </div> --}}
                 <div class="col-md-12 d-flex justify-content-center">
-                    @if(session('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <div class="col-md-9 wow fadeInUp" data-wow-delay="0.2s">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form action="{{ route('fe.placeOrder') }}" method="POST">
                             @csrf
                             <div class="row g-3">
@@ -105,16 +105,15 @@
                                 <!-- Other customer details fields -->
                             
                                 <div class="col-md-12">
-                                    <label for="dishes">Select Dishes:</label>
                                     <div class="row">
                                         @foreach ($menus as $menu)
                                             <div class="col-md-4">
                                                 <h5>{{ $menu->name }}</h5>
                                                 @foreach ($menu->dishes as $dish)
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="dish{{ $dish->id }}" name="dishes[{{ $dish->id }}][selected]" value="{{ $dish->id }}">
-                                                        <label class="form-check-label" for="dish{{ $dish->id }}">{{ $dish->name }}</label>
-                                                        <input type="number" class="form-control" name="dishes[{{ $dish->id }}][quantity]" value="1">
+                                                        <input class="form-check-input dish-checkbox" type="checkbox" id="dish{{ $dish->id }}" name="dishes[{{ $dish->id }}][selected]" value="{{ $dish->id }}" data-price="{{ $dish->price }}">
+                                                        <label class="form-check-label" for="dish{{ $dish->id }}">{{ $dish->name }} (&#8358;{{ $dish->price }})</label>
+                                                        <input type="number" class="form-control dish-quantity" name="dishes[{{ $dish->id }}][quantity]" value="0" min="0">
                                                     </div>
                                                 @endforeach
                                             </div>
@@ -122,6 +121,10 @@
                                     </div>
                                 </div>
                                 
+                                <!-- Total amount section -->
+                                <div class="col-md-12 mt-4">
+                                    <h5>Total Amount: &#8358;<span id="totalAmount">0.00</span></h5>
+                                </div>
 
                                 {{-- <label for="dishes">Select Dishes:</label>
                                 <select multiple id="dishes" name="dishes[]">

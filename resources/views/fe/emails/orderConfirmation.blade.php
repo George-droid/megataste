@@ -19,17 +19,26 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($orderDetails['selectedDishes'] as $index => $dish)
+            @foreach ($orderDetails['dishes'] as $dish)
+            @if (isset($dish['selected']) && $dish['quantity'] > 0)
+                @php
+                    $dishModel = \App\Models\Dish::find($dish['selected']);
+                    $dishName = $dishModel ? $dishModel->name : 'Unknown Dish';
+                @endphp
                 <tr>
-                    <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ $dish['name'] }}</td>
+                    <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ $dishName }}</td>
                     <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{ $dish['quantity'] }}</td>
                     <!-- Add more table cells if needed -->
                 </tr>
-            @endforeach
+            @endif
+        @endforeach
         </tbody>
     </table>
 
     <!-- Add other order details below if needed -->
+    <p>Customer Email: {{ $orderDetails['customerEmail'] }}</p>
+    <p>Customer Phone: {{ $orderDetails['customerPhone'] }}</p>
+    <p>Customer Address: {{ $orderDetails['customerAddress'] }}</p>
 
     <p>Thank you for your order!</p>
 </body>

@@ -142,6 +142,37 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.dish-checkbox');
+        const quantities = document.querySelectorAll('.dish-quantity');
+        const totalAmount = document.getElementById('totalAmount');
+    
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                updateTotalAmount();
+            });
+        });
+    
+        quantities.forEach(quantity => {
+            quantity.addEventListener('input', () => {
+                updateTotalAmount();
+            });
+        });
+    
+        function updateTotalAmount() {
+            let total = 0;
+            checkboxes.forEach((checkbox, index) => {
+                if (checkbox.checked) {
+                    const quantity = parseInt(quantities[index].value);
+                    const price = parseFloat(checkbox.getAttribute('data-price'));
+                    total += quantity * price;
+                }
+            });
+            totalAmount.textContent = total.toFixed(2);
+        }
+    </script>    
+    
 </body>
 
 </html>

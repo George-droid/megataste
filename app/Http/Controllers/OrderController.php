@@ -27,9 +27,7 @@ class OrderController extends Controller
             'customer_email' => 'required|email|max:255',
             'customer_phone' => 'required|string|max:20',
             'customer_address' => 'required|string',
-            // 'dishes.*.selected' => 'required|exists:dishes,id',
-            'dishes.*.quantity' => 'required|integer|min:1', // Validate quantity
-            
+            'dishes.*.quantity' => 'required|integer',
         ];
 
         $validator = Validator::make($request->all(), $rules);
@@ -45,25 +43,6 @@ class OrderController extends Controller
         $customerAddress = $request->input('customer_address');
         $dishes = $request->input('dishes');
 
-        // Further processing/validation of dish quantities
-        foreach ($dishes as $dish) {
-            // Ensure the dish ID is set correctly
-            if (!isset($dish['selected'])) {
-                return redirect()->back()->withErrors(['dishes' => 'Please select dishes'])->withInput();
-            }
-            // dd($dish['selected']);
-
-            $dishModel = Dish::find($dish['selected']);
-            if (!$dishModel) {
-                return redirect()->back()->withErrors(['dishes' => 'Invalid dish selected'])->withInput();
-            }
-
-            dd($dishModel);
-            if ($dishModel->quantity < $dish['quantity']) {
-                return redirect()->back()->withErrors(['dishes' => 'Insufficient quantity for selected dish'])->withInput();
-            }
-        }
-
         // Prepare email data
         $orderDetails = [
             'customerName' => $customerName,
@@ -72,6 +51,7 @@ class OrderController extends Controller
             'customerAddress' => $customerAddress,
             'dishes' => $dishes,
         ];
+        // dd($orderDetails);
 
         // Send email
         Mail::to('wisgeorge.wg@gmail.com')->send(new OrderConfirmation($orderDetails));
@@ -79,6 +59,7 @@ class OrderController extends Controller
         // Redirect back or return a response
         return redirect()->back()->with('success', 'Order placed successfully!');
     }
+
 
     /**
      * Display a listing of the resource.
